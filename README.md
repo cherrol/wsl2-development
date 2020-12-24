@@ -1,31 +1,19 @@
 # 一、安装WSL2
-<hr style="height:1px; background-color:#999" />
 
 参照 https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
-<br />
-<br />
 
 # 二、安装docker desktop windows
-<hr style="height:1px; background-color:#999" />
 
 参照 https://docs.docker.com/docker-for-windows/install/
 
 
-<br />
-<br />
-
 # 三、docker在wsl2下的设置
-<hr style="height:1px; background-color:#999" />
 
 参照 https://docs.docker.com/docker-for-windows/wsl/
 
 
-<br />
-<br />
-
 # 四、WSL2科学上网
-<hr style="height:1px; background-color:#999" />
 
 >  对应的软件设置为允许局域网连接（我使用的是SSR）  
  
@@ -60,12 +48,7 @@ fi
 如果是使用zsh则是打开 ```vim ~/.zshrc```（或者```code ~/.zshrc```），添加上边的代码到末尾
 
 
-<br />
-<br />
-
-
 # 五、docker项目中文件权限
-<hr style="height:1px; background-color:#999" />
 
 >  遇到读写权限问题时，在wsl2下设置文件夹权限为777即可
 
