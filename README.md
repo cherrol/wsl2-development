@@ -106,7 +106,7 @@ newgrp docker
 ```bash
 # 例如我的工作目录为 ~/workspace
 cd ~/
-sudo chmod -R 666 workspace/
+sudo chmod -R 777 workspace/
 ```
 
 # 注意事项
