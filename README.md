@@ -61,3 +61,6 @@ sudo chmod -R 777 workspace/
 
 ```
 
+# 注意事项
+> 测试链接时请关闭windows下其他代理，防止冲突
+
