@@ -47,6 +47,7 @@ fi
 
 如果是使用zsh则是打开 ```vim ~/.zshrc```（或者```code ~/.zshrc```），添加上边的代码到末尾
 
+# 五 Git相关设置
 > 设置wsl ssh共享请参考https://devblogs.microsoft.com/commandline/sharing-ssh-keys-between-windows-and-wsl-2/
 
 > 设置github代理，使用http:// 协议代替 git://   
@@ -56,7 +57,44 @@ fi
         insteadOf = git://github.com/
 ```
 
-# 五、docker项目中文件权限
+> 设置多个ssh连接参照 https://linuxize.com/post/using-the-ssh-config-file/
+> 例如 ```~/.ssh/config```
+```bash
+Host github.com
+  User git
+  Port 22
+  Hostname github.com
+  # 注意修改路径为你的路径
+  IdentityFile "~/.ssh/id_rsa"
+  TCPKeepAlive yes
+
+Host ssh.github.com
+  User git
+  Port 443
+  Hostname ssh.github.com
+  # 注意修改路径为你的路径
+  IdentityFile "~/.ssh/id_rsa"
+  TCPKeepAlive yes
+
+Host gitee.com
+  User git
+  Port 22
+  Hostname gitee.com
+  # 注意修改路径为你的路径
+  IdentityFile "~/.ssh/id_rsa"
+  TCPKeepAlive yes
+
+Host ssh.gitee.com
+  User git
+  Port 443
+  Hostname ssh.gitee.com
+  # 注意修改路径为你的路径
+  IdentityFile "~/.ssh/id_rsa"
+  TCPKeepAlive yes
+
+```
+
+# 六、docker项目中文件权限
 > 运行docker ps(或相关docker指令)有权限问题时需要修复docker权限
 ```bash
 sudo addgroup --system docker
