@@ -49,6 +49,12 @@ fi
 
 > 设置wsl ssh共享请参考https://devblogs.microsoft.com/commandline/sharing-ssh-keys-between-windows-and-wsl-2/
 
+> 设置github代理，使用http:// 协议代替 git:// 
+> 打开 vim ~/.gitconfig，将下边代码添加至末尾
+``` bash
+[url "https://github.com/"]
+        insteadOf = git://github.com/
+```
 
 # 五、docker项目中文件权限
 
