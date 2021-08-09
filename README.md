@@ -47,6 +47,8 @@ fi
 
 如果是使用zsh则是打开 ```vim ~/.zshrc```（或者```code ~/.zshrc```），添加上边的代码到末尾
 
+> 设置wsl ssh共享请参考https://devblogs.microsoft.com/commandline/sharing-ssh-keys-between-windows-and-wsl-2/
+
 
 # 五、docker项目中文件权限
 
