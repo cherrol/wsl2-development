@@ -57,16 +57,18 @@ fi
 ```
 
 # 五、docker项目中文件权限
+> 运行docker ps(或相关docker指令)有权限问题时需要修复docker权限
+```bash
+$sudo addgroup --system docker
+$sudo adduser $USER docker
+$newgrp docker
+```
 
->  遇到读写权限问题时，在wsl2下设置文件夹权限为777即可
-
+>  项目文件权限问题，在wsl2下设置文件夹权限为777即可
 ```bash
 # 例如我的工作目录为 ~/workspace
-
 cd ~/
-
-sudo chmod -R 777 workspace/
-
+sudo chmod -R 666 workspace/
 ```
 
 # 注意事项
