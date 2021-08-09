@@ -57,8 +57,8 @@ fi
         insteadOf = git://github.com/
 ```
 
-> 设置多个ssh连接参照 https://linuxize.com/post/using-the-ssh-config-file/
-> 例如 ```~/.ssh/config```
+> 设置多个ssh连接参照 https://linuxize.com/post/using-the-ssh-config-file/  
+> 例如本地配置github、gitee的ssh ```~/.ssh/config```  
 ```bash
 Host github.com
   User git
