@@ -110,5 +110,5 @@ sudo chmod -R 777 workspace/
 ```
 
 # 注意事项
-> 测试链接时请关闭windows下其他代理，防止冲突
+> 启动ssr或者相关软件时请关闭windows下其他代理（检查windows代理端口是否正确），防止冲突导致ssr不生效
 
