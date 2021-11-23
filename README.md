@@ -47,6 +47,23 @@ fi
 
 如果是使用zsh则是打开 ```vim ~/.zshrc```（或者```code ~/.zshrc```），添加上边的代码到末尾
 
+> 设置 wsl2 网络允许通过防火墙(需要管理员权限打开cmd/powershell执行)
+```bash
+# cd folder
+cd C:\WINDOWS\system32
+
+# run
+New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
+```
+
+> 测试连接(wsl 环境下)
+```bash
+# 查看 wsl 的ip
+env
+# 找到环境变量 http_proxy ，查看主机 ip，假设为 window_ip
+ping window_ip
+```
+
 # 五 Git相关设置
 > 设置wsl ssh共享请参考https://devblogs.microsoft.com/commandline/sharing-ssh-keys-between-windows-and-wsl-2/
 
@@ -54,7 +71,7 @@ fi
 > 打开 vim ~/.gitconfig，将下边代码添加至末尾  
 ``` bash
 [url "https://github.com/"]
-        insteadOf = git://github.com/
+  insteadOf = git://github.com/
 ```
 
 > 设置多个ssh连接参照 https://linuxize.com/post/using-the-ssh-config-file/  
