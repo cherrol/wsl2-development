@@ -129,3 +129,8 @@ sudo chmod -R 777 workspace/
 # 注意事项
 > 启动ssr或者相关软件时请关闭windows下其他代理（检查windows代理端口是否正确），防止冲突导致ssr不生效
 
+# 如果无法 ping 主机
+> 以管理员运行 powershell 后执行 
+```shell
+New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
+```
