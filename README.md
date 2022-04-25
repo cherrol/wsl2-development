@@ -47,7 +47,7 @@ fi
 
 如果是使用zsh则是打开 ```vim ~/.zshrc```（或者```code ~/.zshrc```），添加上边的代码到末尾
 
-> 设置 wsl2 网络允许通过防火墙(需要管理员权限打开cmd/powershell执行)
+> wsl2 ping 不通主机时，需要设置 wsl2 网络允许通过防火墙(需要管理员权限打开cmd/powershell执行)
 ```bash
 # cd folder
 cd C:\WINDOWS\system32
