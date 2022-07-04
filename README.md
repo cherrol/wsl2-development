@@ -1,6 +1,26 @@
 # 一、安装WSL2
 
 参照 https://docs.microsoft.com/en-us/windows/wsl/install-win10
+>  当你电脑配置比较高的时候一定要设置一下 wsl 资源占用，不然 wsl 会占用过多资源导致电脑卡，如下是我的配置（仅供参考）
+>  配置文件位置 C:\Users\[user]\.wslconfig
+```
+[wsl2]
+# 自定义 Linux 内核的绝对路径
+#kernel=<path>
+# 给 WSL 2 虚拟机分配的内存大小
+memory=4GB
+# 为 WSL 2 虚拟机分配的处理器核心数量
+processors=4
+# 为 WSL 2 虚拟机分配的交换空间，0 表示没有交换空间
+swap=16GB
+# 自定义交换虚拟磁盘 vhd 的绝对路径
+# swapFile=<path>
+# 是否允许将 WSL 2 的端口转发到主机（默认为 true）
+# localhostForwarding=<bool>
+
+# `<path>` 必须是带反斜杠的绝对路径，例如 `C:\\Users\\kernel`
+# `<size>` 必须在后面加上单位，例如 8 GB 或 512 MB
+```
 
 
 # 二、安装docker desktop windows
