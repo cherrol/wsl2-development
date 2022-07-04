@@ -2,7 +2,7 @@
 
 参照 https://docs.microsoft.com/en-us/windows/wsl/install-win10
 > 当你电脑配置比较高的时候一定要设置一下 wsl 资源占用，不然 wsl 会占用过多资源导致电脑卡，如下是我的配置（仅供参考）  
-> 配置文件位置 C:\Users\[user]\.wslconfig
+> 配置文件位置 C:\Users\\[user]\\.wslconfig
 ```
 [wsl2]
 # 自定义 Linux 内核的绝对路径
