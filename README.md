@@ -10,7 +10,7 @@
 # 自定义 Linux 内核的绝对路径
 #kernel=<path>
 # 给 WSL 2 虚拟机分配的内存大小
-memory=4GB
+memory=10GB
 # 为 WSL 2 虚拟机分配的处理器核心数量
 processors=4
 # 为 WSL 2 虚拟机分配的交换空间，0 表示没有交换空间
