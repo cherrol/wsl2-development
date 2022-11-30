@@ -150,3 +150,33 @@ sudo chmod -R 777 workspace/
 
 # 注意事项
 > 启动ssr或者相关软件时请关闭windows下其他代理（检查windows代理端口是否正确），防止冲突导致ssr不生效
+
+# .bashrc config
+```bash
+#...
+
+# proxy
+export WSL_MASTER_HOST_IP=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`
+export my_custom_proxy="http://${username}:${passwrod}@${WSL_MASTER_HOST_IP}:1808";
+# export my_custom_proxy="http://${WSL_MASTER_HOST_IP}:1808";
+export all_proxy=$my_custom_proxy
+export ALL_PROXY=$my_custom_proxy
+export http_proxy=$my_custom_proxy
+export https_proxy=$my_custom_proxy
+alias addproxy='
+export all_proxy=$my_custom_proxy
+export ALL_PROXY=$my_custom_proxy
+export http_proxy=$my_custom_proxy
+export https_proxy=$my_custom_proxy
+'
+alias rmproxy='
+unset all_proxy
+unset ALL_PROXY
+unset http_proxy
+unset https_proxy
+'
+# add update && upgrade alias
+alias upall="sudo apt update -y && sudo apt upgrade -y"
+
+#...
+```
