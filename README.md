@@ -154,7 +154,7 @@ sudo chmod -R 777 workspace/
 > 启动ssr或者相关软件时请关闭windows下其他代理（检查windows代理端口是否正确），防止冲突导致ssr不生效
 
 
-# update 2023-01-02 新版 wsl 配置参考 https://github.com/microsoft/WSL/issues/10753#issuecomment-1814839310，也不需要再设置防火墙放行和代理转发
+# update 2023-01-02 新版 wsl 配置参考 https://github.com/microsoft/WSL/issues/10753#issuecomment-1814839310 ，也不需要再设置防火墙放行和代理转发
 # .bashrc config
 ```bash
 #...
