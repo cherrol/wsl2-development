@@ -76,6 +76,8 @@ cd C:\WINDOWS\system32
 
 # run
 New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
+
+#update 2023-01-02 上边脚本执行报错的话参考 https://github.com/microsoft/WSL/issues/10753#issuecomment-1814839310 修改 wsl 配置
 ```
 
 > 测试连接(wsl 环境下)
