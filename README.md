@@ -49,6 +49,8 @@ swap=16GB
 >  在wsl2 terminal中打开```vim ~/.bashrc```（vscode中打开为 ```code ~/.bashrc```），在最下边添加如下代码
 
 ```bash
+# update 2023-01-02 新版 wsl 配置参考 https://github.com/microsoft/WSL/issues/10753#issuecomment-1814839310，也不需要再设置防火墙放行和代理转发
+
 # set http proxy
 WSL_MASTER_HOST_IP=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`
 
@@ -76,8 +78,6 @@ cd C:\WINDOWS\system32
 
 # run
 New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
-
-#update 2023-01-02 上边脚本执行报错的话参考 https://github.com/microsoft/WSL/issues/10753#issuecomment-1814839310 修改 wsl 配置
 ```
 
 > 测试连接(wsl 环境下)
@@ -153,6 +153,8 @@ sudo chmod -R 777 workspace/
 # 注意事项
 > 启动ssr或者相关软件时请关闭windows下其他代理（检查windows代理端口是否正确），防止冲突导致ssr不生效
 
+
+# update 2023-01-02 新版 wsl 配置参考 https://github.com/microsoft/WSL/issues/10753#issuecomment-1814839310，也不需要再设置防火墙放行和代理转发
 # .bashrc config
 ```bash
 #...
