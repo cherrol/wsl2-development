@@ -161,7 +161,7 @@ sudo chmod -R 777 workspace/
 
 # proxy
 export WSL_MASTER_HOST_IP=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`
-export my_custom_proxy="http://$@{username}:$@{password}-@${WSL_MASTER_HOST_IP}:10808";
+export my_custom_proxy="http://@${username}:@${password}-@${WSL_MASTER_HOST_IP}:10808";
 # export my_custom_proxy="http://${WSL_MASTER_HOST_IP}:10808";
 export all_proxy=$my_custom_proxy
 export ALL_PROXY=$my_custom_proxy
