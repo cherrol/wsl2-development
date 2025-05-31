@@ -24,14 +24,13 @@ swap=16GB
 # `<size>` 必须在后面加上单位，例如 8 GB 或 512 MB
 ```
 ## 设置免密登录
+> 参考 https://dev.to/marcelopalin/how-to-enable-user-passwordless-sudo-in-wsl2-linux-38f7
 ```
 # 打开 wsl2 终端执行设置免密登录
 echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/dont-prompt-$USER-for-sudo-password
 
 # 取消免密登录
  sudo rm /etc/sudoers.d/dont-prompt-$USER-for-sudo-password
-
-# 参考 https://dev.to/marcelopalin/how-to-enable-user-passwordless-sudo-in-wsl2-linux-38f7
 ```
 
 
