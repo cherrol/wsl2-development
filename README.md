@@ -61,7 +61,9 @@ echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/dont-prompt-$
 # update 2023-01-02 新版 wsl 配置参考 https://github.com/microsoft/WSL/issues/10753#issuecomment-1814839310，也不需要再设置防火墙放行和代理转发
 
 # set http proxy
-WSL_MASTER_HOST_IP=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`
+# 参考 https://juejin.cn/post/7448131211539251263
+# WSL_MASTER_HOST_IP=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`
+WSL_MASTER_HOST_IP=`ip route show | grep -i default | awk '{ print $3}'`
 
 export http_proxy="http://${WSL_MASTER_HOST_IP}:1080"  # 此处端口对应SSR的本地端口1080
 
@@ -169,7 +171,9 @@ sudo chmod -R 777 workspace/
 #...
 
 # proxy
-export WSL_MASTER_HOST_IP=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`
+# 参考 https://juejin.cn/post/7448131211539251263
+# export WSL_MASTER_HOST_IP=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`
+export WSL_MASTER_HOST_IP=`ip route show | grep -i default | awk '{ print $3}'`
 export my_custom_proxy="http://@${username}:@${password}-@${WSL_MASTER_HOST_IP}:10808";
 # export my_custom_proxy="http://${WSL_MASTER_HOST_IP}:10808";
 export all_proxy=$my_custom_proxy
