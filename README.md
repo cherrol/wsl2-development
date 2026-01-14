@@ -199,3 +199,11 @@ alias upall="sudo apt update -y && sudo apt upgrade -y"
 
 #...
 ```
+
+# Docker Hub 拉取失败问题
+```
+# 登录
+dokcer login
+
+# 登录失败的话设置代理再重新登录，参考 https://stackoverflow.com/a/69052052/21294350
+```
